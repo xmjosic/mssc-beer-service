@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.BeerDto;
+import com.example.demo.dto.BeerDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

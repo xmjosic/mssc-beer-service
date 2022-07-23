@@ -1,0 +1,12 @@
+mssc-beer-service:
+  config:
+    api:
+      host: http://localhost:8089
+      getBeerByIdPath: /api/v1/beer/{uuid}
+      saveBeerPath: /api/v1/beer
+      updateBeerPath: /api/v1/beer/{uuid}
+      deleteBeerPath: /api/v1/beer/{uuid}
+      getCustomerByIdPath: /api/v1/customer/{uuid}
+      saveCustomerPath: /api/v1/customer
+      updateCustomerPath: /api/v1/customer/{uuid}
+      deleteCustomerPath: /api/v1/customer/{uuid}
