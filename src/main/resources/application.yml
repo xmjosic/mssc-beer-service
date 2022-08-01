@@ -10,3 +10,16 @@ mssc-beer-service:
       saveCustomerPath: /api/v1/customer
       updateCustomerPath: /api/v1/customer/{uuid}
       deleteCustomerPath: /api/v1/customer/{uuid}
+    blocking-rest-template:
+      maxTotal: 100
+      socketTimeout: 3000
+      connectionRequestTimeout: 3000
+      defaultMaxPerRoute: 20
+
+
+logging:
+  level:
+    org.apache.http: DEBUG
+
+server:
+  port: 8090

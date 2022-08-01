@@ -1,6 +1,5 @@
-package com.example.demo.dao.impl;
+package com.example.demo.dao;
 
-import com.example.demo.dao.CustomerRepository;
 import com.example.demo.dto.CustomerDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,7 @@ import java.net.URI;
 import java.util.UUID;
 
 @SpringBootTest
-class CustomerRepositoryImplTest {
+class CustomerRepositoryTest {
 
   @Autowired private CustomerRepository repository;
 
