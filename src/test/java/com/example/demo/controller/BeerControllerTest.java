@@ -8,8 +8,10 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
+import static com.example.demo.dto.BeerStyleEnum.PALE_ALE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -28,7 +30,13 @@ class BeerControllerTest {
 
   @Test
   void createBeer() throws Exception {
-    BeerDto beerDto = BeerDto.builder().build();
+    BeerDto beerDto =
+        BeerDto.builder()
+            .upc(123L)
+            .price(new BigDecimal(123))
+            .beerName("Test Beer")
+            .beerStyle(PALE_ALE)
+            .build();
     String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
     mockMvc
@@ -38,7 +46,13 @@ class BeerControllerTest {
 
   @Test
   void updateBeer() throws Exception {
-    BeerDto beerDto = BeerDto.builder().build();
+    BeerDto beerDto =
+        BeerDto.builder()
+            .upc(123L)
+            .price(new BigDecimal(123))
+            .beerName("Test Beer")
+            .beerStyle(PALE_ALE)
+            .build();
     String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
     mockMvc
